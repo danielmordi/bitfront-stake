@@ -14,10 +14,10 @@ class CreateWithdrawalsTable extends Migration
     public function up()
     {
         Schema::create('withdrawals', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->bigInteger('coin_id')->unsigned();
+            $table->unsignedInteger('coin_id');
             $table->foreign('coin_id')->references('id')->on('coins')->onDelete('cascade');
             $table->string('withdraw_from');
             $table->string('wallet_id');
