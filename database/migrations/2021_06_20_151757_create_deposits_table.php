@@ -18,7 +18,7 @@ class CreateDepositsTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('coin_id')->unsigned();
-            $table->foreign('coin_id')->references('id')->on('coins');
+            $table->foreign('coin_id')->references('id')->on('coins')->onDelete('cascade');
             $table->bigInteger('package_id')->unsigned();
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
             $table->bigInteger('amount');
