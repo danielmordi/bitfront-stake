@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Middleware\authCheck;
+use App\Notifications\NewDepositRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoinController;
 use App\Http\Controllers\HomeController;
@@ -23,9 +26,9 @@ use App\Http\Controllers\TransactionLogController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+
+
 
 Route::group(['middleware' => 'auth'], function () {
     // ADMIN
@@ -43,8 +46,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::delete('coin/{id}', [CoinController::class, 'destroy'])->name('coin.delete');
         Route::get('depositlog', [TransactionLogController::class, 'depositlog'])->name('depositlog');
         Route::get('deposit/confirm/{id}', [TransactionLogController::class, 'confirm'])->name('confirmDeposit');
+        Route::get('deposit/cancel/{id}', [TransactionLogController::class, 'cancelDeposit'])->name('cancelDeposit');
         Route::get('withdrawalog', [TransactionLogController::class, 'withdrawalog'])->name('withdrawalog');
         Route::get('withdrawalog/confirm/{id}', [TransactionLogController::class, 'confrimWithdrawal'])->name('confirmWithdrawal');
+        Route::get('withdrawalog/cancel/{id}', [TransactionLogController::class, 'cancelWithdrawal'])->name('cancelWithdrawal');
         Route::get('user/{id}', [AdminController::class, 'viewUser'])->name('view.user');
         Route::patch('user/view/update/wb/{id}', [AdminController::class, 'walletBal'])->name('update.wallet');
         Route::patch('user/view/update/bonus/{id}', [AdminController::class, 'bonus'])->name('update.bonus');
@@ -62,4 +67,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/mining', [PackageController::class, 'packageView'])->name('mining');
         Route::get('/referrals', [ReferralController::class, 'index'])->name('referrals');
     });
+});
+
+Route::get('/test', function () {
+    $email = ['test@mail.com', 'badgang@mail.com'];
+    $deposit = \App\Models\Deposit::find(11);
+    foreach ($email as $e) {
+        Notification::route('mail', $e)->notify(new NewDepositRequest($deposit));
+    }
+//    Notification::send($email, new NewDepositRequest());
 });

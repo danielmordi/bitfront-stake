@@ -42,7 +42,7 @@ bfs | Withdraw
                                             Main Wallet Balance
                                         </div>
                                         <p class=" mb-0 mt-4 text-muted">Daily ROI <span class="float-end"><i
-                                                    class="fa fa-caret-up me-1"></i>{{ $packages->percentage }}%</span></p>
+                                                    class="fa fa-caret-up me-1"></i>{{ $packages->percentage ?? '' }}%</span></p>
                                     </div>
                                 </div>
                             </div>

@@ -10,7 +10,7 @@ class Coin extends Model
 {
     use HasFactory;
 
-    protected $fillables = [
+    protected $fillable = [
         'name', 'wallet_id',
     ];
 
@@ -18,7 +18,7 @@ class Coin extends Model
     {
         return $this->hasMany(Coin::class);
     }
-    
+
     public function withdrawal()
     {
         return $this->hasMany(Coin::class);

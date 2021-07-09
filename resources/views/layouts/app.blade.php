@@ -25,13 +25,16 @@
     <link href="{{ asset('css/app-dark.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Plugins css -->
     <link href="{{ asset('libs/bootstrap-editable/css/bootstrap-editable.css') }}" rel="stylesheet" type="text/css">
-    
+    {{--  Fonts  --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         .table-counter {
             counter-reset: rowNumber;
         }
-    
+
         .table-counter td:first-child:before {
             counter-increment: rowNumber;
             content: counter(rowNumber);

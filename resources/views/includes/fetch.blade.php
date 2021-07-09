@@ -1,6 +1,6 @@
 <script>
     $(document).ready(function () {
-        $("#walletBalanceBtn").click(function (e) { 
+        $("#walletBalanceBtn").click(function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -24,8 +24,8 @@
                     console.log(response);
                     $("#walletBalanaceAlert").addClass('text-success');
                     $("#walletBalanaceAlert").html(response.success);
-                    setTimeout(function() { 
-                        $("#success").hide().html(''); 
+                    setTimeout(function() {
+                        $("#success").hide().html('');
                         location.reload();
                     }, 5000);
                 },
@@ -35,9 +35,9 @@
             });
         });
     });
-    
+
     $(document).ready(function () {
-        $("#hashRateBtn").click(function (e) { 
+        $("#hashRateBtn").click(function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -61,8 +61,8 @@
                     console.log(response);
                     $("#hashRateAlert").addClass('text-success');
                     $("#hashRateAlert").html(response.success);
-                    setTimeout(function() { 
-                        $("#success").hide().html(''); 
+                    setTimeout(function() {
+                        $("#success").hide().html('');
                         location.reload();
                     }, 5000);
                 },
@@ -72,9 +72,9 @@
             });
         });
     });
-    
+
     $(document).ready(function () {
-        $("#bonusBtn").click(function (e) { 
+        $("#bonusBtn").click(function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -98,8 +98,8 @@
                     console.log(response);
                     $("#bonusAlert").addClass('text-success');
                     $("#bonusAlert").html(response.success);
-                    setTimeout(function() { 
-                        $("#success").hide().html(''); 
+                    setTimeout(function() {
+                        $("#success").hide().html('');
                         location.reload();
                     }, 5000);
                 },

@@ -20,7 +20,7 @@
                     <div class="card-box shadow-none p-4">
                         <div class="p-2">
                             <div class="text-center mt-4">
-                                <a href="/"><img src="{{ asset('/images/bfs-logo.png') }}" height="50" alt="logo"></a>
+                                <a href="/"><img src="{{ asset('/logo/bfs-full.png') }}" height="50" alt="logo"></a>
                             </div>
 
                             <h4 class="font-size-18 mt-5 text-center">Welcome Back !</h4>

@@ -31,6 +31,11 @@ bfs | Dashboard
 
                 <div class="card">
                     <div class="card-body">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <div class="table-responsive">
                             <table class="table table-striped table-counter">
                                 <thead class="text-uppercase">
@@ -44,11 +49,6 @@ bfs | Dashboard
                                     <th></th>
                                 </thead>
                                 <tbody>
-                                    @if (session('success'))
-                                        <span class="alert alert-success">
-                                            {{ session('success') }}
-                                        </span>
-                                    @endif
                                     @foreach ($deposits as $log)
                                         <tr>
                                             <td></td>
@@ -62,7 +62,7 @@ bfs | Dashboard
                                             <td>{{ $log->created_at->diffForHumans() }}</td>
                                             <td>
                                                 <a href="{{ route('admin.confirmDeposit', $log->id) }}" class="btn btn-primary btn-sm">Confirm</a>
-                                                <a href="#" class="btn btn-danger btn-sm">Cancel</a>
+                                                <a href="{{ route('admin.cancelDeposit', $log->id) }}" class="btn btn-danger btn-sm">Cancel</a>
                                             </td>
                                         </tr>
                                     @endforeach

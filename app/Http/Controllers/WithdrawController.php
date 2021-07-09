@@ -6,6 +6,8 @@ use App\Models\Admin;
 use App\Models\Coin;
 use App\Models\Package;
 use App\Models\Withdrawal;
+use App\Notifications\NewDepositRequest;
+use App\Notifications\NewWithdrawalRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,6 +55,9 @@ class WithdrawController extends Controller
         $withdrawalRequest->amount = preg_replace("/[^0-9.]/", "", $request->input('amount'));
         $withdrawalRequest->status = 'pending';
         $withdrawalRequest->save();
+
+        //  Send mail notification
+        Auth::user()->notify(new NewWithdrawalRequest ($withdrawalRequest));
 
         return redirect()->back()->with('success', 'Your withdrawal request has been sent successfully!');
     }

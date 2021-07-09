@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset('/images/bfs-logo.png') }}" alt="" height="22">
+                        <img src="{{ asset('/logo/bfs-full.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('/images/bfs-logo.png') }}" alt="" height="30">
+                        <img src="{{ asset('/logo/bfs-full.png') }}" alt="" height="30">
                     </span>
                 </a>
 
                 <a href="/" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('/images/bfs-logo.png') }}" alt="" height="22">
+                        <img src="{{ asset('/logo/bfs-full.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('/images/bfs-logo.png') }}" alt="" height="30">
+                        <img src="{{ asset('/logo/bfs-full.png') }}" alt="" height="30">
                     </span>
                 </a>
             </div>
@@ -112,7 +112,7 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{-- <img class="rounded-circle " src="{{ asset('/images/users/avatar-1.jpg') }}"
                          alt="Header Avatar"> --}}
-                         <i class=" ion ion-md-more"></i> 
+                         <i class=" ion ion-md-more"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->

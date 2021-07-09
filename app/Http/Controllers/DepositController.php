@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Coin;
 use App\Models\Deposit;
 use App\Models\Package;
+use App\Notifications\NewDepositRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 
 class DepositController extends Controller
 {
@@ -56,6 +58,7 @@ class DepositController extends Controller
         $deposit->status = 'pending';
         $deposit->save();
 
+        Auth::user()->notify(new NewDepositRequest($deposit));
 
         return redirect()->route('user.deposit.info', $deposit->id)
         ->with('success', 'Your deposit request has been sent successfully, please follow the instructions below to complete deposit');

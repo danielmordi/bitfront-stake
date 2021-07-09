@@ -89,6 +89,22 @@ class User extends Authenticatable
         return $this->referral_link = route('register', ['ref' => $this->username]);
     }
 
+    /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function registered(Request $request, $user)
+    {
+        if ($user->referrer !== null) {
+            Notification::send($user->referrer, new ReferrerBonus($user));
+        }
+
+        return redirect($this->redirectPath());
+    }
+
     public function package()
     {
         return $this->hasMany(Package::class);

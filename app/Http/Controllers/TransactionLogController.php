@@ -11,7 +11,7 @@ class TransactionLogController extends Controller
 {
     public function depositlog()
     {
-        $dLog = Deposit::where('status', 'pending')->get();
+        $dLog = Deposit::where('status', 'pending')->latest()->get();
         return view('admin.depositlog')->with('deposits', $dLog);
     }
 
@@ -19,12 +19,12 @@ class TransactionLogController extends Controller
     {
         $deposit = Deposit::find($id);
         $percent = $deposit->package->percentage;
-        $duration = (int)$deposit->package->duration;
+        $duration = $deposit->package->duration;
         $amount = $deposit->amount;
         $id = $deposit->user_id;
         
         // Calculate daily profit
-        $profit = (($percent / 100) * $amount) / $duration;
+        $profit = ((intval($percent) / 100) * intval($amount)) / intval($duration);
         
         $update = User::find($id);
         $update->wallet_balance = $profit;
@@ -36,6 +36,15 @@ class TransactionLogController extends Controller
         $deposit->save();
         
         return redirect()->back()->with('success', 'Confirmed!');
+    }
+
+    public function cancelDeposit($id)
+    {
+        $cancel = Deposit::findOrFail($id);
+        $cancel->status = 'canceled';
+        $cancel->save();
+
+        return redirect()->back()->with('success', 'Deposit request has been mark as a failed transaction!');
     }
 
     public function withdrawalog()
@@ -61,5 +70,14 @@ class TransactionLogController extends Controller
         $wt->save();
         
         return redirect()->back()->with('success', 'Confirmed!');
+    }
+
+    public function cancelWithdrawal($id)
+    {
+        $cancel = Withdrawal::findOrFail($id);
+        $cancel->status = 'canceled';
+        $cancel->save();
+
+        return redirect()->back()->with('success', 'Withdrawal request has been mark as a failed transaction!');
     }
 }

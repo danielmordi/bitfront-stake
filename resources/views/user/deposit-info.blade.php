@@ -18,9 +18,9 @@ bfs | Deposit
             <div class="container-fluid">
                 <!-- end page title -->
                 <div class="row">
-                    <div class="col-md-6 offset-md-3 col-sm-12">
+                    <div class="col-md-4 offset-md-4 col-sm-12">
                         <div class="card">
-                            <div class="card-header"><small class="lead">Scan Bitfront Stake QR Code</small></div>
+                            <div class="card-header"><small class="lead">Bitfront Stake deposit information </small></div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -37,36 +37,27 @@ bfs | Deposit
                                                 Your deposit will be automatically confirmed, once your payment has been received.
                                             </li>
                                         </ul>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12">
-                                                <img class="align-self-start mb-2 w-100"
-                                                     src="https://via.placeholder.com/250"
-                                                     alt="Generic placeholder image" width="200" height="250">
-                                            </div>
-                                            <div class="col-md-6 col-sm-12 oder-first order-sm-last">
-                                                <div class="table-responsive py-2">
-                                                    <table class="table">
-                                                        <tr>
-                                                            <td><span class="text-warning">Amount</span></td>
-                                                            <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->amount }}</p></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><span class="text-warning">Package</span></td>
-                                                            <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->package->name }}</p></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><span class="text-warning">Status</span></td>
-                                                            <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->status }}</p></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><span class="text-warning">Wallet Address</span></td>
-                                                            <td>{{ $currentDeposit->coin->wallet_id }}</td>
-                                                        </tr>
-                                                    </table>
-                                                    <a href="/account" class="btn w-50 btn-block btn-teal"
-                                                       onclick="alert('Completed, please wait while your request is been processed.')">Complete</a>
-                                                </div>
-                                            </div>
+                                        <div class="table-responsive py-2">
+                                            <table class="table">
+                                                <tr>
+                                                    <td><span class="text-warning">Amount</span></td>
+                                                    <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->amount }}</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="text-warning">Package</span></td>
+                                                    <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->package->name }}</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="text-warning">Status</span></td>
+                                                    <td><p style="font-size: 1.2em; letter-spacing:1.5px; font-weight: bolder" class="text-uppercase mb-2">{{ $currentDeposit->status }}</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="text-warning">Wallet Address</span></td>
+                                                    <td>{{ $currentDeposit->coin->wallet_id }}</td>
+                                                </tr>
+                                            </table>
+                                            <a href="/account" class="btn w-50 btn-block btn-teal"
+                                               onclick="alert('Completed, please wait while your request is been processed.')">Complete</a>
                                         </div>
                                     </div>
                                 </div>

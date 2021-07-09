@@ -9,12 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        return view('home.index');
+    }
     public function admin()
     {
         $users = User::where('role_id', 2)->paginate(10);
         return view('admin.dashboard')->with('users', $users);
     }
-    
+
     public function user()
     {
         $package = Package::where('name', Auth::user()->package)->first();
