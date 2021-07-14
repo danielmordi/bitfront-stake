@@ -54,8 +54,14 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.login');
         });
 
-        $this->app->singleton(LoginResponseContract::class, LoginResponse::class);
-        $this->app->singleton(TwoFactorLoginResponseContract::class, TwoFactorLoginResponse::class);
+        $this->app->singleton(
+            LoginResponseContract::class,
+            LoginResponse::class
+        );
+        $this->app->singleton(
+            TwoFactorLoginResponseContract::class,
+            TwoFactorLoginResponse::class
+        );
 
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('email', $request->email)

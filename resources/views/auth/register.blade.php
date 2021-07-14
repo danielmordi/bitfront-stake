@@ -9,9 +9,13 @@
     <div class="accountbg"
          style="background: url('{{ asset('/images/bg-2.jpg') }}');background-size: cover;background-position: center;"></div>
 
-    <div class="wrapper-page account-page-full">
+    <div class="wrapper-page account-page-full" style="
+        background-color: #21033E;
+    ">
 
-        <div class="card shadow-none">
+        <div class="card shadow-none" style="
+            background-color: #21033E;
+        ">
             <div class="card-block">
 
                 <div class="account-box">
@@ -29,7 +33,9 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label" for="username">Username</label>
-                                    <input type="text" name="username" required class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Enter username">
+                                    <input type="text" name="username" required
+                                           class="form-control @error('username') is-invalid @enderror"
+                                           id="username"  style="background-color: #fff;" placeholder="Enter username">
                                     @error('username')
                                         <span class="invalid-feedback">
                                             {{ $message }}
@@ -39,7 +45,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label" for="name">Name</label>
-                                    <input type="text" name="name" required class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Enter name">
+                                    <input type="text" name="name" required class="form-control @error('name') is-invalid @enderror" id="name"  style="background-color: #fff;" placeholder="Enter name">
                                     @error('name')
                                         <span class="invalid-feedback">
                                             {{ $message }}
@@ -49,8 +55,8 @@
 
                                 <div class="mb-3">
                                     <label class="form-label" for="useremail">Email</label>
-                                    <input type="email" name="email" required class="form-control @error('useremail') is-invalid @enderror" id="useremail" placeholder="Enter email">
-                                    @error('useremail')
+                                    <input type="email" name="email" required class="form-control @error('email') is-invalid @enderror" id="useremail"  style="background-color: #fff;" placeholder="Enter email">
+                                    @error('email')
                                         <span class="invalid-feedback">
                                             {{ $message }}
                                         </span>
@@ -60,7 +66,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="userpassword">Password</label>
                                     <input type="password" name="password" required class="form-control @error('password') is-invalid @enderror " id="userpassword"
-                                           placeholder="Enter password">
+                                            style="background-color: #fff;" placeholder="Enter password">
                                     @error('password')
                                         <span class="invalid-feedback">
                                             {{ $message }}
@@ -71,7 +77,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="confirmuserpassword">Confirm Password</label>
                                     <input type="password" required name="password_confirmation" class="form-control" id="confirmuserpassword"
-                                           placeholder="Confirm password">
+                                            style="background-color: #fff;" placeholder="Confirm password">
                                 </div>
 
                                 <div class="mb-3">

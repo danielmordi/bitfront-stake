@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+//    public function __construct()
+//    {
+//        if (Auth::user() !== null) {
+//            if (Auth::user()->role_id == 1) {
+//                return route('admin.dashboard');
+//            }
+//            return route('user.dashboard');
+//        }
+//    }
     public function index()
     {
         return view('home.index');

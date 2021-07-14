@@ -10,7 +10,7 @@
     <meta content="Themesbrand" name="author">
     <meta name="_token" content="{{ csrf_token() }}">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('logo/bfs-logo-white.png') }}">
 
     <!-- C3 Chart css -->
     <link href="{{ asset('libs/c3/c3.min.css') }}" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
         .table-counter {
             counter-reset: rowNumber;
         }
-
+w
         .table-counter td:first-child:before {
             counter-increment: rowNumber;
             content: counter(rowNumber);

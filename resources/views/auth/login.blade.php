@@ -10,9 +10,13 @@
          style="background: url({{ asset('images/bg-2.jpg') }});background-size: cover;background-position: center;">
     </div>
 
-    <div class="wrapper-page account-page-full">
+    <div class="wrapper-page account-page-full" style="
+        background-color: #21033E;
+    ">
 
-        <div class="card shadow-none">
+        <div class="card shadow-none" style="
+            background-color: #21033E;
+        ">
             <div class="card-block">
 
                 <div class="account-box">
@@ -30,7 +34,9 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label" for="email">Username</label>
-                                    <input type="text" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Enter email">
+                                    <input type="text" name="email"
+                                           value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror"
+                                           id="email" placeholder="Enter email" style="background-color: #fff;">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -40,7 +46,8 @@
 
                                 <div class="mb-3">
                                     <label class="form-label" for="userpassword">Password</label>
-                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="userpassword"
+                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
+                                           id="userpassword" style="background-color: #fff;"
                                            placeholder="Enter password">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -53,7 +60,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input" value=""
-                                                   id="customControlInline">
+                                                   id="customControlInline" style="background-color: #fff;">
                                             <label class="form-check-label" for="customControlInline">Remember
                                                 me</label>
                                         </div>

@@ -82,7 +82,7 @@
                             <h1 class="wow fadeInUp" data-wow-delay="0.2s">Buy & sell crypto easier than ever</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.3s">We have over 15 year exprience in business consultting arena. We have over 15 year exprience in business consultting arena and artficial intelligence.</p>
                             <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                                <a href="#" class="btn dream-btn mr-3">Learn More</a>
+                                <a href="/register" class="btn dream-btn mr-3">Create a free Account</a>
                                 <a href="#" class="btn dream-btn">Contact Us</a>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
             <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">How it works</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Investing with us, is as simple as 123. Follow the below steps to join the wining team today!.</p>
         </div>
 
         <div class="container">
@@ -128,8 +128,8 @@
                     <div class="services-block-four how">
                         <div class="inner-box">
                             <div class="step">1</div>
-                            <h3><a href="#">Powerfull Mobile and Online App</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda beatae provident non hic eum dolores natus, vitae, quae, facere perferendis.</div>
+                            <h3><a href="#">Create a free account</a></h3>
+                            <div class="text">Simply click on the register button to create a free account for yourself. Its quick and easy.</div>
 
                         </div>
                     </div>
@@ -138,8 +138,8 @@
                     <div class="services-block-four how">
                         <div class="inner-box">
                             <div class="step">2</div>
-                            <h3><a href="#">Brings more Transparency and Speed</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda beatae provident non hic eum dolores natus, vitae, quae, facere perferendis.</div>
+                            <h3><a href="#">Make a deposit</a></h3>
+                            <div class="text">Pick a plan of your choice from our investment plans. Make a deposit to your personal wallet.</div>
                         </div>
                     </div>
 
@@ -147,8 +147,8 @@
                     <div class="services-block-four how" style="margin-bottom:0">
                         <div class="inner-box">
                             <div class="step">3</div>
-                            <h3><a href="#">Special for Multiple Use Capabilities</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi assumenda beatae provident non hic eum dolores natus, vitae, quae, facere perferendis.</div>
+                            <h3><a href="#">Get your returns on time</a></h3>
+                            <div class="text">Pick a plan of your choice from our investment plans. Make a deposit to your personal wallet.</div>
                         </div>
                     </div>
 
@@ -166,7 +166,7 @@
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
             <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">We are trusted</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">We are a team of expert investors in the financial market, NSE and recognized worldwide. A big player in the ICO market ranking #1 in 2019 and 2020</p>
         </div>
         <div class="container">
             <div class="row">
@@ -278,10 +278,16 @@
                         <div class="dream-dots wow fadeInUp" data-wow-delay="0.2s">
                             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                         </div>
-                        <h4 class="wow fadeInUp" data-wow-delay="0.3s">We complete every project with extra care as customer need.</h4>
-                        <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nunc scelerisque in.</p>
-                        <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magni, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. Fugit!</p>
-                        <a class="btn dream-btn mt-30 wow fadeInUp" data-wow-delay="0.6s" href="#">Read More</a>
+                        <h4 class="wow fadeInUp" data-wow-delay="0.3s">We provide custom built software to maximize your wining steak on your daily ROI.</h4>
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">
+                            <strong>BITFRONT STAKE</strong> innovative platforms and tools provide the power and reliability you need to feel more confident in your investment, trading and loan access.
+                        </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">
+                            <strong>BITFRONT STAKE</strong> is an International Investment company, officially registered in the USA,
+                            it was launched in May 2015. The company has direct contracts with professional traders and miners around
+                            the world that guarantees the best services and ensures profits are made and remitted to investors daily.
+                        </p>
+{{--                        <a class="btn dream-btn mt-30 wow fadeInUp" data-wow-delay="0.6s" href="#">Read More</a>--}}
                     </div>
                 </div>
 
